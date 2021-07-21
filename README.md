@@ -11,9 +11,15 @@ play-learn-share is an app that consolidates ideas for at home activities for ch
 - To create a friendly, easy to use and visually appealing UX 
 
 Library | Description
+
 React   | DOM manipulation, rendering, consuming Ruby on Rails API
+
 React Router Dom | Creating dynamic routing to various components, Allows for Route, Link and Router hooks to be used
+
 Axios | Promise based HTTP client for the browser, allows API requests to be made, converts data to JSON
+
 Bcyrpt | Hashes passwords
+
 Cors | Cross-Origin Resources Sharing, allows servers to permit loading from domains than their own
+
 JWT | Web Tokens, encodes, decodes and verifies authentication tokens
