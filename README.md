@@ -26,10 +26,10 @@ JWT | Web Tokens, encodes, decodes and verifies authentication tokens
 
 #Component Tree
  
-<a href=https://whimsical.com/play-laugh-share-Mxd5GdZ6Hu4xDeyEvShYzN</a>
+<a href='https://whimsical.com/play-laugh-share-Mxd5GdZ6Hu4xDeyEvShYzN'</a>
 
 #ERD
 
-<a href=https://drive.google.com/file/d/16ZEsNR3NwIVH22oYqz2wSyDeVoegPJX9/view?usp=sharing</a>
+<a href='https://drive.google.com/file/d/16ZEsNR3NwIVH22oYqz2wSyDeVoegPJX9/view?usp=sharing'</a>
 
 
