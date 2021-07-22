@@ -23,3 +23,7 @@ Bcyrpt | Hashes passwords
 Cors | Cross-Origin Resources Sharing, allows servers to permit loading from domains than their own
 
 JWT | Web Tokens, encodes, decodes and verifies authentication tokens
+
+#Wireframe
+
+<a href https://whimsical.com/play-laugh-share-Mxd5GdZ6Hu4xDeyEvShYzN?/>
