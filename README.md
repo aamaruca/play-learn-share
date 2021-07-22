@@ -24,7 +24,6 @@ Cors | Cross-Origin Resources Sharing, allows servers to permit loading from dom
 
 JWT | Web Tokens, encodes, decodes and verifies authentication tokens
 
-##Font-End/Client
 
 #Component Tree
  
@@ -34,7 +33,6 @@ JWT | Web Tokens, encodes, decodes and verifies authentication tokens
 
 <a href='https://www.figma.com/file/7YoNk1LxcrBY07mbd45QCa/Play-Learn-Share?node-id=0%3A1' rel="nofollow">Wireframe</a>
 
-#Back-End/Server
 #ERD
 
 <a href='https://drive.google.com/file/d/16ZEsNR3NwIVH22oYqz2wSyDeVoegPJX9/view?usp=sharing' rel="nofollow">ERD at Drawio</a>
