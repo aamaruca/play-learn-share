@@ -24,12 +24,55 @@ Cors | Cross-Origin Resources Sharing, allows servers to permit loading from dom
 
 JWT | Web Tokens, encodes, decodes and verifies authentication tokens
 
+##Font-End/Client
+
 #Component Tree
  
 <a href='https://whimsical.com/play-laugh-share-Mxd5GdZ6Hu4xDeyEvShYzN' rel="nofollow">Component Tree</a>
 
+#Wireframes
+
+<a href='https://www.figma.com/file/7YoNk1LxcrBY07mbd45QCa/Play-Learn-Share?node-id=0%3A1' rel="nofollow">Wireframe</a>
+
+#Back-End/Server
 #ERD
 
 <a href='https://drive.google.com/file/d/16ZEsNR3NwIVH22oYqz2wSyDeVoegPJX9/view?usp=sharing' rel="nofollow">ERD at Drawio</a>
 
+#PostMVP
+- Use react library react-dropzone for drag and drop mobile upload
+- Add CSS animation to Home Screen
+- Turn Create from into a module on the UserPost Screen
+- Hamburger menu for mobile view
 
+#Timeframes
+
+| Component                            | Priority | Estimated Time | Time Invested | Actual Time |
+| ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
+| Basic MVP Design                     |    H     |      5hrs      |      hrs      |     hrs     |
+| Polished MVP Desgin                  |    H     |      5hrs      |      hrs      |     hrs     |
+| File Structure for Backend           |    H     |      3hrs      |      hrs      |     hrs     |
+| Pseudocode                           |    H     |      3hrs      |      3hrs      |     hrs     |
+| Backend CRUD                         |    H     |      3hrs      |      3hrs      |     hrs     |
+| Backend CRUD Route Testing           |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Front End File Build                 |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Create Routes and Links              |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Front End CRUD Functionality         |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Front End CRUD Route Testing         |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Rendering data to Home Screen        |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Rendering data to All Comics Screen  |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Rendering data to Details Screen     |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Create Edit Form Screen              |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Test Edit Form Functions and routes  |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Test Delete Form Funtions and routes |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Link Buttons                         |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Home Screen              |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling All Comics Screen        |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Details Screen           |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Create Screen            |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Edit Screen              |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Delete Screen            |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Login Screen             |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS Styling Sign-Up Screen           |    H     |      3hrs      |      3hrs      |     3hrs     |
+| CSS polished styling                 |    H     |      3hrs      |      3hrs      |     3hrs     |
+| Total                                |    H     |     87hrs      |     87hrs      |    87hrs     |
