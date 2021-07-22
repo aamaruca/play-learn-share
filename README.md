@@ -47,30 +47,29 @@ JWT | Web Tokens, encodes, decodes and verifies authentication tokens
 
 | Component                            | Priority | Estimated Time | Time Invested | Actual Time |
 | ------------------------------------ | :------: | :------------: | :-----------: | :---------: |
-| Basic MVP Design                     |    H     |      5hrs      |      hrs      |     hrs     |
-| Polished MVP Desgin                  |    H     |      5hrs      |      hrs      |     hrs     |
+| Basic MVP Design                     |    H     |      3hrs      |      hrs      |     hrs     |
+| Polished MVP Desgin                  |    H     |      3hrs      |      hrs      |     hrs     |
 | File Structure for Backend           |    H     |      3hrs      |      hrs      |     hrs     |
-| Pseudocode                           |    H     |      3hrs      |      3hrs      |     hrs     |
-| Backend CRUD                         |    H     |      3hrs      |      3hrs      |     hrs     |
-| Backend CRUD Route Testing           |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Front End File Build                 |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Create Routes and Links              |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Front End CRUD Functionality         |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Front End CRUD Route Testing         |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Rendering data to Home Screen        |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Rendering data to All Comics Screen  |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Rendering data to Details Screen     |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Create Edit Form Screen              |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Test Edit Form Functions and routes  |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Test Delete Form Funtions and routes |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Link Buttons                         |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Home Screen              |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling All Comics Screen        |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Details Screen           |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Create Screen            |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Edit Screen              |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Delete Screen            |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Login Screen             |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS Styling Sign-Up Screen           |    H     |      3hrs      |      3hrs      |     3hrs     |
-| CSS polished styling                 |    H     |      3hrs      |      3hrs      |     3hrs     |
-| Total                                |    H     |     87hrs      |     87hrs      |    87hrs     |
+| Pseudocode                           |    H     |      3hrs      |      hrs      |     hrs     |
+| Backend CRUD                         |    H     |      3hrs      |      hrs      |     hrs     |
+| Backend CRUD Route Testing           |    H     |      3hrs      |      hrs      |     hrs     |
+| Front End File Build                 |    H     |      3hrs      |      hrs      |     hrs     |
+| Create Routes and Links              |    H     |      3hrs      |      hrs      |     hrs     |
+| Front End CRUD Functionality         |    H     |      3hrs      |      hrs      |     hrs     |
+| Front End CRUD Route Testing         |    H     |      3hrs      |      hrs      |     hrs     |
+| Rendering data to Home Screen        |    H     |      3hrs      |      hrs      |     hrs     |
+| Rendering data to All Posts Screen   |    H     |      3hrs      |      hrs      |     hrs     |
+| Rendering data to PostDetails Screen |    H     |      3hrs      |      hrs      |     hrs     |
+| Create & Edit Form Screen            |    H     |      3hrs      |      hrs      |     hrs     |
+| Test Edit Form Functions and routes  |    H     |      3hrs      |      hrs      |     hrs     |
+| Test Delete Form Funtions and routes |    H     |      3hrs      |      hrs      |     hrs     |
+| Link Buttons                         |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling Home Screen              |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling All Post Screen          |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling Details Screen           |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling Create Screen            |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling Edit Screen              |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling Login Screen             |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS Styling Join Screen              |    H     |      3hrs      |      hrs      |     hrs     |
+| CSS polished styling                 |    H     |      3hrs      |      hrs      |     hrs     |
+| Total                                 |    H     |     75hrs      |     hrs      |     hrs     |
