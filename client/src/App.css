@@ -1,6 +1,10 @@
 .App {
   text-align: center;
 }
+body {
+  background-color: #C0F5F9;
+
+}
 
 h1 {
   font-size: 3rem;
@@ -19,3 +23,4 @@ a {
 a:visited {
   color: black;
 }
+

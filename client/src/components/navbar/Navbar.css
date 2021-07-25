@@ -1,17 +1,28 @@
 .logo {
   display: flex;
-  width: 90vw;
+  height: 25vh;
   margin: auto;
 }
 
 .nav {
   display: flex;
-  flex-direction: column; 
+  flex-direction: row; 
+  margin-bottom: 5rem;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.7rem;
+  background-color: white;
+  
 }
 
 .nav-info {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-evenly;
-  margin-top: 0em;
+  margin-right: 1rem;
+}
+
+
+.logout-btn {
+  border: none;
+  background-color: white;
 }
