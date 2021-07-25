@@ -8,8 +8,14 @@ export default function Posts({ postList }) {
     <div>
       <h3>All Posts</h3>
       {postList.map((post, index) =>
-        <p key='index'>{post.activity}</p>
-      )}
-    </div>
+      <>
+        <p key={index}>{post.activity}</p>
+        <p>{post.materials}</p>
+        {/* <p>{post.activity}</p>
+        <p>{post.activity}</p> */}
+          </>
+        )}
+      </div>
+    
   )
 }
