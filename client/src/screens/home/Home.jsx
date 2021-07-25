@@ -1,9 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Home() {
   return (
     <div>
-      <h2>this is my home screen</h2>
+      <h3>Intro</h3>
+      <Link to='/posts'><button> Browse All </button></Link>
     </div>
   )
 }

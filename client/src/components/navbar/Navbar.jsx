@@ -11,7 +11,7 @@ export default function Navbar({currentUser, handleLogout}) {
       {currentUser ? (
         <div className='nav-info' >
           <p>Hello, {currentUser.username}!</p>
-          <Link> Create </Link>
+          <Link to='/create'> Create </Link>
           <button className='logout-btn' onClick={handleLogout}>Logout</button>
         </div>
       ) : 

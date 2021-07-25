@@ -1,11 +1,11 @@
 import "./App.css";
 import { Switch, Route, useHistory} from "react-router-dom";
 import { useState, useEffect } from "react";
+import { loginUser, newUser, removeToken, verifyUser } from "./services/auth";
 import Layout from "./components/layouts/Layout";
 import Login from "./screens/login/Login";
-import Home from "./screens/home/Home";
 import Join from "./screens/join/Join";
-import { loginUser, newUser, removeToken, verifyUser } from "./services/auth";
+import MainContainer from "./components/containers/MainContainer";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -53,7 +53,7 @@ function App() {
             <Join handleJoin={handleJoin} />
           </Route>
           <Route path="/">
-            <Home />
+            <MainContainer />
           </Route>
         </Switch>
       </Layout>
