@@ -1,21 +1,15 @@
-import React from 'react'
+import React from "react";
 
 export default function Posts({ postList }) {
-
-
-  
   return (
     <div>
       <h3>All Posts</h3>
-      {postList.map((post, index) =>
-      <>
-        <p key={index}>{post.activity}</p>
-        <p>{post.materials}</p>
-        {/* <p>{post.activity}</p>
-        <p>{post.activity}</p> */}
-          </>
-        )}
-      </div>
-    
-  )
+      {postList.map((post, index) => (
+        <div>
+          <p key={index}>{post.activity}</p>
+          <img src={post.img_url} />
+        </div>
+      ))}
+    </div>
+  );
 }

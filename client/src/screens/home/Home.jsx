@@ -6,15 +6,15 @@ export default function Home({ categoryList }) {
   console.log(categoryList)
   return (
     <div>
-      <h3>Intro</h3>
-      <Link to='/posts'><button> Browse All </button></Link>
+      <p>Welcome! Here we share our ideas of at home activities for our kids to enjoy and we watch them learn as they play! </p>
+      <br/>
       {categoryList && categoryList.map(category => {
         return (
-          <Link to={`/category/${category.id}`}>{category.name}</Link>
+          <Link to={`/category/${category.id}`}><button>{category.name}</button><br/></Link>
         )
       })
-      
-      }
+    }
+    <Link to='/posts'><button> Browse All </button></Link>
     </div>
   )
 }
