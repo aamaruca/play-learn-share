@@ -9,3 +9,13 @@ h1 {
 h3 {
   font-size: 2rem;
 }
+
+a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+a:visited {
+  color: black;
+}

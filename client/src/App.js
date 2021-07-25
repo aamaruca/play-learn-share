@@ -5,7 +5,7 @@ import Layout from "./components/layouts/Layout";
 import Login from "./screens/login/Login";
 import Home from "./screens/home/Home";
 import Join from "./screens/join/Join";
-import { loginUser, newUser, verifyUser } from "./services/auth";
+import { loginUser, newUser, removeToken, verifyUser } from "./services/auth";
 
 function App() {
   const [currentUser, setCurrentUser] = useState(null);
@@ -31,10 +31,20 @@ function App() {
     history.push('/')
   }
 
+  const handleLogout = () => {
+    setCurrentUser(null)
+    localStorage.removeItem('authToken')
+    removeToken()
+    history.push('/')
+  }
+
 
   return (
     <div className="App">
-      <Layout currentUser={currentUser}>
+      <Layout
+        currentUser={currentUser}
+        handleLogout={handleLogout}
+      >
         <Switch>
           <Route path="/login">
             <Login handleLogin={handleLogin} />

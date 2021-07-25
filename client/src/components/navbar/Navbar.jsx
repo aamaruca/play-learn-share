@@ -2,8 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
-export default function Navbar(props) {
- const {currentUser} = props
+export default function Navbar({currentUser, handleLogout}) {
 
   return (
     <div className='nav'>
@@ -11,9 +10,9 @@ export default function Navbar(props) {
       <br />
       {currentUser ? (
         <div className='nav-info' >
-          <p className='intro'>Hello, {currentUser.username}!</p>
-          <Link className='create' to='/create'> Create </Link>
-          <button className='logout'>Logout</button>
+          <p>Hello, {currentUser.username}!</p>
+          <Link> Create </Link>
+          <button onClick={handleLogout}>Logout</button>
         </div>
       ) : 
         <div className='nav-links'>
