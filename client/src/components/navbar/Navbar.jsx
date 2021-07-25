@@ -4,7 +4,8 @@ import './Navbar.css'
 export default function Navbar() {
   return (
     <div>
-      <img className='logo' src='https://i.imgur.com/U8JDexGl.png' />
+      <img className='logo' src='https://i.imgur.com/eRKYkhDm.png' />
+      
       <br/>
       <Link to='/login'> Login </Link>
       <br/>
