@@ -2,11 +2,12 @@ import React from "react";
 import Navbar from '../navbar/Navbar';
 
 export default function Layout(props) {
+  const {currentUser} = props
   return (
     <div>
-      <Navbar/>
+      <Navbar currentUser={currentUser}/>
       <header>
-          <h3></h3>
+      
       </header>
 
       {props.children}
