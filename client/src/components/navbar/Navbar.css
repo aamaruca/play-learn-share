@@ -9,7 +9,7 @@
   flex-direction: row; 
   margin-bottom: 5rem;
   font-family: 'Finger Paint', cursive;
-  font-size: 1.7rem;
+  font-size: 1rem;
   background-color: white;
   
 }
@@ -25,4 +25,6 @@
 .logout-btn {
   border: none;
   background-color: white;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1rem;
 }
