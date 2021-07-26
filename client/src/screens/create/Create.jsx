@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getOneCategory } from "../../services/categories";
+import { addToCategories } from "../../services/posts";
 
 
 export default function Create({ handleCreate, categoryList }) {
   const { categoryData, setCateoryData } = useState(null)
-  // const { selectedCategory, setSelectedCategory } = useState('')
+  const { selectedCategory, setSelectedCategory } = useState()
   const { id } = useParams()
 
   const [formData, setFormData] = useState({
@@ -24,13 +25,14 @@ export default function Create({ handleCreate, categoryList }) {
     instructions,
     description,
     resources,
+    category,
     img_url,
   } = formData;
   
   useEffect(() => {
     const fetchCategory = async () => {
-      const oneCategory = await getOneCategory(id)
-      setCateoryData(oneCategory)
+      const categoryData = await getOneCategory(id)
+      setCateoryData(categoryData)
   }
   fetchCategory()    
   }, )
@@ -40,6 +42,14 @@ export default function Create({ handleCreate, categoryList }) {
   //   setSelectedCategory(value)
   // }
 
+//   const handleCategorySubmit = async (e) => {
+//     e.preventDefault()
+//     const categoryData = await addToCategories(id, selectedCategory)
+//     setSelectedCategory(categoryData)
+//  }
+
+
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -53,6 +63,7 @@ export default function Create({ handleCreate, categoryList }) {
       e.preventDefault()
       handleCreate(formData)
     }}>
+      {/* onSubmit={handleCategorySubmit}> */}
       <h3>Create New Post</h3>
       <label>
         <input
@@ -105,17 +116,6 @@ export default function Create({ handleCreate, categoryList }) {
       </label>
       <br />
       <label>
-        <select onChange={handleChange} defaultValue='default'>
-          <option disabled value='default'>
-            -- Select a Category --
-          </option>
-          {categoryList.map((category) => (
-            <option  value={category.id}>{category.name}</option>
-          ))}
-        </select>
-      </label>
-      <br />
-      <label>
         <input
           type="text"
           name="img_url"
@@ -125,6 +125,17 @@ export default function Create({ handleCreate, categoryList }) {
         />
       </label>
       <br />
+      <label>
+        <select onChange={handleChange} defaultValue='default'>
+          <option disabled value='default'>
+            -- Select a Category --
+          </option>
+          {categoryList?.map((category) => (
+            <option key={category.id} value={category.id}>{category.name}</option>
+          ))}
+        </select>
+      </label>
+      <br/>
       <button>Add New Post</button>
     </form>
   );
