@@ -39,6 +39,13 @@ class PostsController < ApplicationController
     @post.destroy
   end
 
+  def add_category
+    @category = Category.find(params[:category_id])
+    @post.category << @category
+
+    render json: @post, include: :category
+  end
+  
   private
 
   # Use callbacks to share common setup or constraints between actions.

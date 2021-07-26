@@ -5,7 +5,7 @@ import { addToCategories } from "../../services/posts";
 
 
 export default function Create({ handleCreate, categoryList }) {
-  const { categoryData, setCateoryData } = useState(null)
+  const { categoryData, setCateoryData } = useState()
   const { selectedCategory, setSelectedCategory } = useState()
   const { id } = useParams()
 
@@ -15,7 +15,7 @@ export default function Create({ handleCreate, categoryList }) {
     instructions: "",
     description: "",
     resources: "",
-    category: "",
+    category_id: "",
     img_url: "",
   });
   
@@ -25,17 +25,17 @@ export default function Create({ handleCreate, categoryList }) {
     instructions,
     description,
     resources,
-    category,
+    category_id,
     img_url,
   } = formData;
   
-  useEffect(() => {
-    const fetchCategory = async () => {
-      const categoryData = await getOneCategory(id)
-      setCateoryData(categoryData)
-  }
-  fetchCategory()    
-  }, )
+  // useEffect(() => {
+  //   const fetchCategory = async () => {
+  //     const categoryData = await getOneCategory(id)
+  //     setCateoryData(categoryData)
+  // }
+  // fetchCategory()    
+  // },[id, setCateoryData] )
 
   // const handleCategoryChange = (e) => {
   //   const { value } = e.target
@@ -126,7 +126,7 @@ export default function Create({ handleCreate, categoryList }) {
       </label>
       <br />
       <label>
-        <select onChange={handleChange} defaultValue='default'>
+        <select name="category_id" onChange={handleChange} defaultValue='default'>
           <option disabled value='default'>
             -- Select a Category --
           </option>
