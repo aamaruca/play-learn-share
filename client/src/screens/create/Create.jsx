@@ -1,7 +1,12 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import { getOneCategory } from "../../services/categories";
 import Category from "../cateogory/Category";
 
-export default function Create({ handleCreate }) {
+export default function Create({ handleCreate, categoryList }) {
+  const { categoryData, setCateoryData } = useState(null)
+  const { selectedCategory, setSelectedCategory } = useState('')
+  const { id } = useParams()
   const [formData, setFormData] = useState({
     activity: "",
     materials: "",
@@ -21,6 +26,19 @@ export default function Create({ handleCreate }) {
     category,
     img_url,
   } = formData;
+
+  useEffect(() => {
+    const fetchCategoryData = async (id) => {
+      const categoryData = await getOneCategory(id)
+      setCateoryData(categoryData)
+  }
+  fetchCategoryData()    
+  }, [])
+
+  const handleCategoryChange = (e) => {
+    const { value } = e.target
+    setSelectedCategory(value)
+  }
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -87,13 +105,14 @@ export default function Create({ handleCreate }) {
       </label>
       <br />
       <label>
-        <input
-          type="text"
-          name="category"
-          value={category}
-          placeholder="Category"
-          onChange={handleChange}
-        />
+        <select onChange={handleCategoryChange} defaultValue='default'>
+          <option disabled value='default'>
+            -- Select a Category --
+          </option>
+          {categoryList.map((category) => (
+            <option value={category.id}>{category.name}</option>
+          ))}
+        </select>
       </label>
       <br />
       <label>
@@ -106,7 +125,7 @@ export default function Create({ handleCreate }) {
         />
       </label>
       <br />
-      <button>Submit</button>
+      <button>Add New Post</button>
     </form>
   );
 }

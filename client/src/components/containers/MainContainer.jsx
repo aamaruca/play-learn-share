@@ -30,6 +30,7 @@ export default function MainContainer() {
     setPostList((prevState) => [...prevState, postData])
     history.push('/posts')
   }
+  
 
   return (
     <Switch>
@@ -38,8 +39,8 @@ export default function MainContainer() {
       </Route>
       <Route path="/posts/create">
         <Create
-          handleCreate={handleCreate
-          }
+          handleCreate={handleCreate}
+          categoryList={categoryList}
         />
       </Route>
       <Route path="/posts">
