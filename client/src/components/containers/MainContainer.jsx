@@ -4,6 +4,7 @@ import { getAllPosts } from "../../services/posts";
 import { Route, Switch } from "react-router-dom";
 import Home from '../../screens/home/Home'
 import Posts from "../../screens/posts/Posts";
+import Category from "../../screens/cateogory/Category";
 
 export default function MainContainer() {
   const [postList, setPostList] = useState([]);
@@ -24,11 +25,14 @@ export default function MainContainer() {
 
   return (
     <Switch>
+      <Route path="/category/:id">
+        <Category postList={postList}/>
+      </Route>
       <Route path="/posts">
         <Posts postList={postList} />
       </Route>
       <Route path="/">
-        <Home categoryList={categoryList}/>
+        <Home categoryList={categoryList} />
       </Route>
     </Switch>
   );
