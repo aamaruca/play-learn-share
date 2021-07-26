@@ -6,7 +6,7 @@ export default function Navbar({currentUser, handleLogout}) {
 
   return (
     <div className='nav'>
-      <img className="logo" src="https://i.imgur.com/U8JDexG.png?1" alt="title"/>
+      <Link to="/"><img className="logo" src="https://i.imgur.com/U8JDexG.png?1" alt="title"/></Link>
       <br />
   
       {currentUser ? (

@@ -37,7 +37,10 @@ export default function MainContainer() {
         <Category postList={postList}/>
       </Route>
       <Route path="/posts/create">
-        <Create handleCreate={handleCreate}/>
+        <Create
+          handleCreate={handleCreate
+          }
+        />
       </Route>
       <Route path="/posts">
         <Posts postList={postList} />
