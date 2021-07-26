@@ -12,7 +12,7 @@ export default function Category({ postList }) {
         return (
           <div className="activity-box">
             <p className='title'>Activity: {post.activity}</p>
-            <img className="category-image" src={post.img_url} />
+            <img className="category-image" src={post.img_url} alt="title" />
           </div>
         )
       })}
