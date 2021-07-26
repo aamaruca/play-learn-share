@@ -1,7 +1,9 @@
 .logo {
   display: flex;
-  height: 25vh;
-  margin: auto;
+  height: 20vh;
+  margin: .5rem;
+  margin-right: 0;
+  
 }
 
 .nav {

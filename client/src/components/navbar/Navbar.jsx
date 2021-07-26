@@ -6,13 +6,14 @@ export default function Navbar({currentUser, handleLogout}) {
 
   return (
     <div className='nav'>
-      <img className="logo" src="https://i.imgur.com/eRKYkhDm.png?1" alt="title"/>
+      <img className="logo" src="https://i.imgur.com/U8JDexG.png?1" alt="title"/>
       <br />
+  
       {currentUser ? (
         <div className='nav-info' >
           <p>Hello, {currentUser.username}!</p>
-          <Link to='/create'> Create </Link>
-          <button className='logout-btn' onClick={handleLogout}>Logout</button>
+          <Link to='/posts/create'> Create </Link>
+          <Link to='/'><button className='logout-btn' onClick={handleLogout}>Logout</button></Link>
         </div>
       ) : 
         <div className='nav-info'>
