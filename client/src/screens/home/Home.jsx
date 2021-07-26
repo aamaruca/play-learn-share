@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 
 export default function Home({ categoryList }) {
-  console.log(categoryList)
   return (
     <div>
       <h3>Sharing how our kids learn through play everyday!</h3>
