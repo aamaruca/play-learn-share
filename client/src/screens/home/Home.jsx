@@ -6,8 +6,7 @@ export default function Home({ categoryList }) {
   console.log(categoryList)
   return (
     <div>
-      <p>Welcome! Here we share our ideas of at home activities for our kids to enjoy and we watch them learn as they play! </p>
-      <br/>
+      <h3>Sharing how our kids learn through play everyday!</h3>
       {categoryList && categoryList.map(category => {
         return (
           <Link to={`/category/${category.id}`}><button>{category.name}</button><br/></Link>
