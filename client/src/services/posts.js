@@ -25,7 +25,7 @@ export const deletePost = async (id) => {
   return resp
 }
 
-export const addToCategories = async (categoryId, postId) => {
-  const resp = await api.put(`/categories/${categoryId}/posts/${postId}`)
-  return resp.data
-}
+// export const addToCategories = async (categoryId, postId) => {
+//   const resp = await api.put(`/categories/${categoryId}/posts/${postId}`)
+//   return resp.data
+// }

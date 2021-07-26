@@ -4,7 +4,7 @@ import { getOnePost } from '../../services/posts'
 import { Link } from 'react-router-dom'
 
 
-export default function PostDetail({props}) {
+export default function PostDetail(props) {
   const [post, setPost] = useState()
   const { id } = useParams()
   const {handleDelete} = props
@@ -35,5 +35,4 @@ export default function PostDetail({props}) {
       </div>
     </>
   )
-  
 }

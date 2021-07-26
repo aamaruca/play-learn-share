@@ -35,26 +35,27 @@ export default function MainContainer() {
   };
 
   const handleDelete = async (id) => {
+    console.log(postList)
     await deletePost(id);
     setPostList((prevState) => prevState.filter((post) => post.id !== id));
+    history.push('/posts')
   };
-  console.log();
-
+ 
   return (
     <Switch>
       <Route path="/category/:id">
         <Category postList={postList} />
       </Route>
       <Route path="/posts/:id">
-        <PostDetail />
+        <PostDetail
+          handleDelete={handleDelete}
+        />
       </Route>
       <Route path="/create">
         <Create handleCreate={handleCreate} categoryList={categoryList} />
       </Route>
       <Route path="/edit">
-        <EditPost 
-          handleDelete={handleDelete}
-        />
+        <EditPost  />
       </Route>
       <Route path="/posts">
         <Posts postList={postList} />
