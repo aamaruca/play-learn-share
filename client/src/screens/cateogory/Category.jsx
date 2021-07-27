@@ -12,12 +12,14 @@ export default function Category({ postList }) {
     <>
       {posts && posts.map(post => {
         return (
+          <>
           <Link to={`/posts/${post.id}`}>
           <div className="activity-box">
             <p className='title'>Activity: {post.activity}</p>
             <img className="category-image" src={post.img_url} alt="title" />
             </div>
-          </Link>
+            </Link>
+            </>
         )
       })}
   

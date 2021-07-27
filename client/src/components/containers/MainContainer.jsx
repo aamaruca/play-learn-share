@@ -65,6 +65,7 @@ export default function MainContainer() {
       <Route path="/posts/:id">
         <PostDetail
           handleDelete={handleDelete}
+          categoryList={categoryList}
         />
       </Route>
       <Route path="/create">

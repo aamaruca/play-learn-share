@@ -11,7 +11,6 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    # @category = Category.find(@post.category_id)
     render json: @post, include: :category
   end
 
