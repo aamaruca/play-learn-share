@@ -16,16 +16,15 @@ export default function Navbar({ currentUser, handleLogout }) {
 
       {currentUser ? (
         <div className="nav-info">
-          <p>Hello, {currentUser.username}!</p>
+          <p className="greeting">Hello, {currentUser.username}!</p>
           <div className="logged-in-links">
-            <Link to="/">
-              <div className="logout" onClick={handleLogout}>
+            <Link className="logout" to="/">
+              <div onClick={handleLogout}>
                 Logout
               </div>
             </Link>
             <Link classname="create" to="/create">
-              {" "}
-              Create{" "}
+              Create
             </Link>
           </div>
         </div>
@@ -33,13 +32,11 @@ export default function Navbar({ currentUser, handleLogout }) {
         <div className="nav-links">
           <br />
           <Link className="login" to="/login">
-            {" "}
-            Login{" "}
+            Login
           </Link>
           <br />
           <Link className="join" to="/join">
-            {" "}
-            Join{" "}
+            Join
           </Link>
         </div>
       )}

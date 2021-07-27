@@ -2,24 +2,24 @@
   display: flex;
   height: 22vh;
   margin: auto;
-  padding-top: .8rem;
+  padding-top: 0.8rem;
   padding-bottom: 0px;
   border-radius: 15px;
 }
 
 .nav {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   width: 90vw;
   margin: 1rem auto;
-  font-family: 'Finger Paint', cursive;
+  font-family: "Finger Paint", cursive;
   background-color: white;
   border-radius: 45px;
 }
 
 .nav-links {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 0;
@@ -34,14 +34,27 @@
   position: relative;
   right: 1.5rem;
 }
+.login:hover:hover {
+  background-color: #e91d1d;
+  border-radius: 20px;
+  transition-duration: 0.1s;
+}
+.join:hover {
+  background-color: #fcb242;
+  border-radius: 20px;
+  transition-duration: 0.1s;
+}
 .nav-info {
   display: flex;
-  flex-direction:column;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
   margin-top: 0;
   padding-bottom: 1rem;
   font-size: 1.3rem;
+}
+.greeting {
+  font-size: 1.5rem;
 }
 .logged-in-links {
   display: flex;
@@ -49,9 +62,42 @@
   padding: 1rem;
 }
 .logout {
-  display: flex;  
   margin-right: 5rem;
+  height: 1rem;
 }
-/* .create {
-  display: flex;
-} */
+.logout:hover {
+  background-color: #e91d1d;
+  border-radius: 20px;
+  transition-duration: 0.1s;
+}
+.create {
+  margin-left: 5rem;
+}
+.create:hover {
+  background-color: #fcb242;
+  border-radius: 20px;
+  transition-delay: 1s;
+}
+@media only screen and (min-width: 700px) {
+  .logo {
+    border-radius: 30px;
+    padding: 1.5rem;
+  }
+
+  .nav {
+    flex-direction: row;
+    width: 90vw;
+  }
+  .nav-links {
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: auto;
+  }
+  .login {
+    padding: 2rem;
+  }
+  .join {
+    padding: 2rem;
+  }
+}
