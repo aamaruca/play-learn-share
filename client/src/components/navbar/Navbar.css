@@ -1,32 +1,128 @@
 .logo {
   display: flex;
-  height: 20vh;
-  margin: .5rem;
-  margin-right: 0;
-  
+  height: 22vh;
+  margin: auto;
+  padding-top: 0.8rem;
+  padding-bottom: 0px;
+  border-radius: 15px;
 }
 
 .nav {
   display: flex;
-  flex-direction: row; 
-  margin-bottom: 5rem;
-  font-family: 'Finger Paint', cursive;
-  font-size: 1rem;
+  flex-direction: column;
+  width: 90vw;
+  margin: 1rem auto;
+  font-family: "Finger Paint", cursive;
   background-color: white;
-  
+  border-radius: 45px;
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.login {
+  position: relative;
+  left: -2rem;
+  padding: 1rem;
+}
+.join {
+  position: relative;
+  right: 1.5rem;
+  padding: 1rem;
 }
 
 .nav-info {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  margin-right: 1rem;
+  align-items: center;
+  margin-top: 0;
+  padding-bottom: 1rem;
+  font-size: 1.3rem;
+}
+.greeting {
+  font-size: 1.5rem;
+}
+.logged-in-links {
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+.logout {
+  margin-right: 2rem;
+  padding: 1rem;
+}
+.create {
+  margin-left: 2rem;
+  padding: 1rem;
+}
+.logout:hover {
+  background-color: #16BDF1;
+  border-radius: 20px;
+  transition-duration: .1s;
 }
 
+.create:hover {
+  background-color: #C295FB ;
+  border-radius: 20px;
+}
+.login:hover {
+  background-color: #e91d1d;;
+  border-radius: 20px;
+  transition-duration: 0.1s;
+}
+.join:hover {
+  background-color: #fcb242;
+  border-radius: 20px;
+  transition-duration: 0.1s;
+}
 
-.logout-btn {
-  border: none;
-  background-color: white;
-  font-family: 'Finger Paint', cursive;
-  font-size: 1rem;
+@media only screen and (min-width: 700px) {
+  .logo {
+    border-radius: 30px;
+    padding: 1.5rem;
+  }
+  .nav {
+    flex-direction: row;
+    width: 90vw;
+  }
+  .nav-links {
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2rem;
+    margin: auto;
+  }
+  
+  .nav-info{
+    position: relative;
+    right: 2rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .logged-in-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .logout {
+    margin: auto;
+    padding: 2rem;
+  }
+  .create {
+    margin: auto;
+    padding: 2rem;
+  }
+  .login {
+    padding: 2rem;
+  }
+  .join {
+    padding: 2rem;
+  }
+  
 }

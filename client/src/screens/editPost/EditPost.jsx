@@ -126,11 +126,11 @@ export default function EditPost({ postList, categoryList, handleUpdate }) {
       </label>
       <br />
       <label>
-        <select name="category_id" onChange={handleChange}>
+        <select name="category_id" onChange={handleChange} >
           {categoryList?.map((category) => (
             <option
-              default={category.id === category_id ?? false}
               key={category.id}
+              selected={category.id === category_id}
               value={category.id}
             >
               {category.name}

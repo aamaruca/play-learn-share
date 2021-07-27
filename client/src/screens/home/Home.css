@@ -1,0 +1,48 @@
+.slogan {
+  font-family: 'Schoolbell', cursive;
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.category-btn {
+  background-color: #FBEE77;
+  border: none;
+  border-radius: 15px;
+  /* box-shadow: 20px, 5px, 5px black; */
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding: 1rem;
+}
+.browse-btn {
+  background-color: #FCB242;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding: 1rem;
+}
+
+.category-btn:hover, .browse-btn:hover {
+  background-color:#FF9BCB ;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 700px) {
+  .slogan {
+    font-size: 2.5rem;
+  }
+  .category-btn {
+    padding: 2rem;
+  }
+}
+  @media only screen and (min-width: 1000px){
+  .category-btn {
+    background-color: #16BDF1;
+  }
+  .browse-btn {
+    background-color:#A2DE67;
+  }
+}

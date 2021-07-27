@@ -1,16 +1,4 @@
 .activity-box {
-  display:flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  width: 75vw;
-  border: 2px black solid;
-  margin: 1rem auto;
-  padding: 1rem;
+display: flex ;
+flex-direction: row;
 }
-
-.category-image {
-  width: 75vw;
-  padding: 1rem;
-}
-

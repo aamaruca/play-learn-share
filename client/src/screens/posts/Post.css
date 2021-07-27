@@ -1,0 +1,44 @@
+
+.home {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.title {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 3rem;
+  padding-bottom: 1.5rem;
+}
+.activity-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.activity-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #16BDF1;
+  border-radius: 15px;
+  padding: 1rem; 
+  margin: 1rem auto ;
+  width: 37vw;
+}
+.activity-name {
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.4rem;
+  padding-bottom: 1rem;
+
+}
+.activity-image {
+  width: 37vw;
+  margin: auto;
+  border-radius: 15px;
+}
+.home:hover {
+  color:#e91d1d;
+}
+.activity-card:hover {
+  opacity: .5;
+  cursor: pointer;
+}
+
+
