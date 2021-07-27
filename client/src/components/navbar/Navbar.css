@@ -29,21 +29,14 @@
 .login {
   position: relative;
   left: -2rem;
+  padding: 1rem;
 }
 .join {
   position: relative;
   right: 1.5rem;
+  padding: 1rem;
 }
-.login:hover:hover {
-  background-color: #e91d1d;
-  border-radius: 20px;
-  transition-duration: 0.1s;
-}
-.join:hover {
-  background-color: #fcb242;
-  border-radius: 20px;
-  transition-duration: 0.1s;
-}
+
 .nav-info {
   display: flex;
   flex-direction: column;
@@ -62,28 +55,39 @@
   padding: 1rem;
 }
 .logout {
-  margin-right: 5rem;
-  height: 1rem;
+  margin-right: 2rem;
+  padding: 1rem;
+}
+.create {
+  margin-left: 2rem;
+  padding: 1rem;
 }
 .logout:hover {
-  background-color: #e91d1d;
+  background-color: #16BDF1;
+  border-radius: 20px;
+  transition-duration: .1s;
+}
+
+.create:hover {
+  background-color: #C295FB ;
+  border-radius: 20px;
+}
+.login:hover {
+  background-color: #e91d1d;;
   border-radius: 20px;
   transition-duration: 0.1s;
 }
-.create {
-  margin-left: 5rem;
-}
-.create:hover {
+.join:hover {
   background-color: #fcb242;
   border-radius: 20px;
-  transition-delay: 1s;
+  transition-duration: 0.1s;
 }
+
 @media only screen and (min-width: 700px) {
   .logo {
     border-radius: 30px;
     padding: 1.5rem;
   }
-
   .nav {
     flex-direction: row;
     width: 90vw;
@@ -94,10 +98,31 @@
     font-size: 2rem;
     margin: auto;
   }
+  
+  .nav-info{
+    position: relative;
+    right: 2rem;
+    margin-top: 3rem;
+    font-size: 2rem;
+  }
+
+  .logged-in-links {
+    display: flex;
+    flex-direction: column;
+  }
+  .logout {
+    margin: auto;
+    padding: 2rem;
+  }
+  .create {
+    margin: auto;
+    padding: 2rem;
+  }
   .login {
     padding: 2rem;
   }
   .join {
     padding: 2rem;
   }
+  
 }

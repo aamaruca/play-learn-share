@@ -23,7 +23,7 @@ export default function Navbar({ currentUser, handleLogout }) {
                 Logout
               </div>
             </Link>
-            <Link classname="create" to="/create">
+            <Link className="create" to="/create">
               Create
             </Link>
           </div>

@@ -1,0 +1,25 @@
+.slogan {
+  font-family: 'Schoolbell', cursive;
+  border-radius: 25px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.category-btn {
+  background-color: #FBEE77;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding: 1rem;
+}
+.browse-btn {
+  background-color: #A2DE67;
+  border: none;
+  border-radius: 15px;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding: 1rem;
+}

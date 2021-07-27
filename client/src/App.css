@@ -15,8 +15,8 @@ h3 {
 
 a {
   text-decoration: none;
-  color: black;
   cursor: pointer;
+  color:black;
 }
 
 a:visited {
