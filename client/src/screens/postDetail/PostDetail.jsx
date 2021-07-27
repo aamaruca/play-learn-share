@@ -1,12 +1,12 @@
 import {useState, useEffect} from 'react'
-import { useParams, Redirect } from 'react-router-dom'
+import { useParams} from 'react-router-dom'
 import { getOnePost } from '../../services/posts'
 import { Link } from 'react-router-dom'
 import "./PostDetail.css"
 
 
 export default function PostDetail(props) {
-  const [redirect, setRedirect]= useState(true)
+  
   const [post, setPost] = useState()
   const { id } = useParams()
   const { handleDelete, categoryList } = props
@@ -20,18 +20,12 @@ export default function PostDetail(props) {
     fetchPost()
   }, [])
 
-  const backBtn = (e) => {
-    setRedirect(false)
-  }
 
-  // if (redirect === false) {
-  //   return <Redirect to={`/category/${categoryList.id}`}/>
-  // }
 
   return (
     <>
       <div className="detail-card">
-        <button onClick={(e) => backBtn()}>Back</button>
+        <Link to={`/category/${post?.category.id}`}><button>Back</button></Link>
       <h3>{post?.activity}</h3>
         <img src={post?.img_url} alt='title' />
         <br/>
