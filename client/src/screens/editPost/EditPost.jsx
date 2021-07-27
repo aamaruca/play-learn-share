@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getOneCategory } from "../../services/categories";
-import { addToCategories } from "../../services/posts";
 
-
-export default function Create({ handleCreate, categoryList }) {
-  const { categoryData, setCateoryData } = useState()
-  const { selectedCategory, setSelectedCategory } = useState()
-  const { id } = useParams()
+export default function EditPost({ postList, categoryList, handleUpdate }) {
+  // const { categoryData, setCateoryData } = useState()
+  // const { selectedCategory, setSelectedCategory } = useState()
+  const { id } = useParams();
 
   const [formData, setFormData] = useState({
     activity: "",
@@ -18,7 +15,7 @@ export default function Create({ handleCreate, categoryList }) {
     category_id: "",
     img_url: "",
   });
-  
+
   const {
     activity,
     materials,
@@ -28,28 +25,27 @@ export default function Create({ handleCreate, categoryList }) {
     category_id,
     img_url,
   } = formData;
-  
+
   useEffect(() => {
-    const fetchCategory = async () => {
-      const categoryData = await getOneCategory(id)
-      setCateoryData(categoryData)
-  }
-  fetchCategory()    
-  },[id, setCateoryData] )
+    const prefillFormData = () => {
+      const onePost = postList.find((post) => post.id === +id);
+      // setFormData({
+      //   activity: onePost?.activity,
+      //   materials: onePost?.materials,
+      //   instructions: onePost?.instructions,
+      //   description: onePost?.description,
+      //   resources: onePost?.resources,
+      //   category_id: onePost?.category_id,
+      //   img_url: onePost?.img_url,
+      // });
+      setFormData({...onePost})
+    };
+    if (postList.length) {
+      prefillFormData();
+    }
+    prefillFormData();
+  }, [postList, handleUpdate]);
 
-  // const handleCategoryChange = (e) => {
-  //   const { value } = e.target
-  //   setSelectedCategory(value)
-  // }
-
-//   const handleCategorySubmit = async (e) => {
-//     e.preventDefault()
-//     const categoryData = await addToCategories(id, selectedCategory)
-//     setSelectedCategory(categoryData)
-//  }
-
-
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -58,13 +54,16 @@ export default function Create({ handleCreate, categoryList }) {
     }));
   };
 
+console.log(category_id)
+
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-      handleCreate(formData)
-    }}>
-      {/* onSubmit={handleCategorySubmit}> */}
-      <h3>Create New Post</h3>
+    <form
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleUpdate(id, formData);
+      }}
+    >
+      <h3>Edit Post</h3>
       <label>
         <input
           type="text"
@@ -126,17 +125,20 @@ export default function Create({ handleCreate, categoryList }) {
       </label>
       <br />
       <label>
-        <select name="category_id" onChange={handleChange} defaultValue='default'>
-          <option disabled value='default'>
-            -- Select a Category --
-          </option>
+        <select name="category_id" onChange={handleChange}>
           {categoryList?.map((category) => (
-            <option key={category.id} value={category.id}>{category.name}</option>
+            <option
+              default={category.id === category_id ?? false}
+              key={category.id}
+              value={category.id}
+            >
+              {category.name}
+            </option>
           ))}
         </select>
       </label>
-      <br/>
-      <button>Add New Post</button>
+      <br />
+      <button>Edit</button>
     </form>
   );
 }

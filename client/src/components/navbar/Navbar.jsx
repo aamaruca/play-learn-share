@@ -12,7 +12,7 @@ export default function Navbar({currentUser, handleLogout}) {
       {currentUser ? (
         <div className='nav-info' >
           <p>Hello, {currentUser.username}!</p>
-          <Link to='/posts/create'> Create </Link>
+          <Link to='/create'> Create </Link>
           <Link to='/'><button className='logout-btn' onClick={handleLogout}>Logout</button></Link>
         </div>
       ) : 
