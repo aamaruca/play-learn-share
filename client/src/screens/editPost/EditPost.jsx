@@ -54,7 +54,8 @@ export default function EditPost({ postList, categoryList, handleUpdate }) {
     }));
   };
 
-console.log(category_id)
+  console.log(category_id)
+  
 
   return (
     <form
@@ -138,7 +139,7 @@ console.log(category_id)
         </select>
       </label>
       <br />
-      <button>Edit</button>
+      <button>Submit</button>
     </form>
   );
 }
