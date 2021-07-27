@@ -11,7 +11,8 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    render json: @post
+    # @category = Category.find(@post.category_id)
+    render json: @post, include: :category
   end
 
   # POST /posts
@@ -39,13 +40,7 @@ class PostsController < ApplicationController
     @post.destroy
   end
 
-  def add_category
-    @category = Category.find(params[:category_id])
-    @post.category << @category
 
-    render json: @post, include: :category
-  end
-  
   private
 
   # Use callbacks to share common setup or constraints between actions.

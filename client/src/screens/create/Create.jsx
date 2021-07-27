@@ -29,13 +29,13 @@ export default function Create({ handleCreate, categoryList }) {
     img_url,
   } = formData;
   
-  // useEffect(() => {
-  //   const fetchCategory = async () => {
-  //     const categoryData = await getOneCategory(id)
-  //     setCateoryData(categoryData)
-  // }
-  // fetchCategory()    
-  // },[id, setCateoryData] )
+  useEffect(() => {
+    const fetchCategory = async () => {
+      const categoryData = await getOneCategory(id)
+      setCateoryData(categoryData)
+  }
+  fetchCategory()    
+  },[id, setCateoryData] )
 
   // const handleCategoryChange = (e) => {
   //   const { value } = e.target

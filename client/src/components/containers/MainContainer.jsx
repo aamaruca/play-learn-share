@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAllCategories } from "../../services/categories";
-import { getAllPosts, postPost, deletePost } from "../../services/posts";
+import { getAllPosts, postPost, deletePost, putPost } from "../../services/posts";
 import { Route, Switch, useHistory } from "react-router-dom";
 import Home from "../../screens/home/Home";
 import Posts from "../../screens/posts/Posts";
@@ -29,10 +29,20 @@ export default function MainContainer() {
 
   const handleCreate = async (formData) => {
     console.log(formData);
-    // const postData = await postPost(formData)
-    // setPostList((prevState) => [...prevState, postData])
-    // history.push('/posts')
+    const postData = await postPost(formData)
+    setPostList((prevState) => [...prevState, postData])
+    history.push('/posts')
   };
+
+  const handleUpdate = async (id, formData) => {
+    const postData = await putPost(id, formData)
+    setPostList((prevState) => 
+      prevState.map((post) => {
+      return post.id === +id ? postData : post
+    })
+    )
+    history.push('/posts')
+  }
 
   const handleDelete = async (id) => {
     console.log(postList)
@@ -46,6 +56,12 @@ export default function MainContainer() {
       <Route path="/category/:id">
         <Category postList={postList} />
       </Route>
+      <Route exact path="/posts/:id/edit">
+        <EditPost
+          postList={postList}
+          categoryList={categoryList}
+          handleUpdate={handleUpdate} />
+      </Route>
       <Route path="/posts/:id">
         <PostDetail
           handleDelete={handleDelete}
@@ -53,9 +69,6 @@ export default function MainContainer() {
       </Route>
       <Route path="/create">
         <Create handleCreate={handleCreate} categoryList={categoryList} />
-      </Route>
-      <Route path="/edit">
-        <EditPost  />
       </Route>
       <Route path="/posts">
         <Posts postList={postList} />
