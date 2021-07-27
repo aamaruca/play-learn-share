@@ -1,5 +1,49 @@
-.delete-btn {
-  font-size: 3rem;
-  color:  #64f164;
+.detail-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #16bdf1;
+  border-radius: 25px;
+  padding: 0.5rem;
+  margin: auto;
+  width: 90vw;
+}
 
+.detail-image {
+  display: flex;
+  margin: auto;
+  border-radius: 20px;
+  width: 85vw;
+}
+.detail-card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.back-btn {
+  position: relative;
+  left: -5rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.detail-home-btn {
+  position: relative;
+  right: -5rem;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+.back-btn:hover {
+  color: #C295FB;
+}
+
+.detail-home-btn:hover {
+  color: #e91d1d;
+}
+.category-name {
+  font-family: "Finger Paint", cursive;
+  font-size: 1.2rem;
+  padding-bottom: 0.7rem;
+}
+
+.delete-btn {
+  font-size: 2rem;
 }
