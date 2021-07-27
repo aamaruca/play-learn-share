@@ -21,7 +21,6 @@ export default function PostDetail(props) {
   }, [])
 
 
-
   return (
     <>
       <div className="detail-card">
