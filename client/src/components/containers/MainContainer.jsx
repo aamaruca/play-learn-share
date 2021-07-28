@@ -31,6 +31,7 @@ export default function MainContainer() {
     console.log(formData);
     const postData = await postPost(formData)
     setPostList((prevState) => [...prevState, postData])
+    debugger
     history.push('/posts')
   };
 
