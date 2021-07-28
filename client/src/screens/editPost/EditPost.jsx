@@ -44,7 +44,7 @@ export default function EditPost({ postList, categoryList, handleUpdate }) {
     }));
   };
 
-  console.log(category_id)
+
   
 
   return (
