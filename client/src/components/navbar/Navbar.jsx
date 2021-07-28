@@ -5,23 +5,18 @@ import "./Navbar.css";
 export default function Navbar({ currentUser, handleLogout }) {
   return (
     <nav className="nav">
-      <Link to="/">
-        <img
-          className="logo"
-          src="https://i.imgur.com/T2jooUr.png?1"
-          alt="title"
-        />
-      </Link>
+      <img
+        className="logo"
+        src="https://i.imgur.com/T2jooUr.png?1"
+        alt="title"
+      />
       <br />
-
       {currentUser ? (
         <div className="nav-info">
           <p className="greeting">Hello, {currentUser.username}!</p>
           <div className="logged-in-links">
             <Link className="logout" to="/">
-              <div onClick={handleLogout}>
-                Logout
-              </div>
+              <div onClick={handleLogout}>Logout</div>
             </Link>
             <Link className="create" to="/create">
               Create

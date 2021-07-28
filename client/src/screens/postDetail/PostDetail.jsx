@@ -21,7 +21,7 @@ export default function PostDetail(props) {
   return (
     <>
       <div className="detail-card">
-        <div className="detail-card-header">
+        <div className="button-container">
           <Link to={`/category/${post?.category.id}`}>
             <div className="back-btn">
               <i class="fas fa-caret-square-left"></i>
@@ -32,32 +32,31 @@ export default function PostDetail(props) {
               <i class="fas fa-home"></i>
             </div>
           </Link>
+          <Link to={`/posts/${post?.id}/edit`}>
+            <div className="edit-btn">
+              <i class="fas fa-edit"></i>
+            </div>
+          </Link>
+          <div className="delete-btn" onClick={() => handleDelete(post?.id)}>
+            <i class="fas fa-trash-alt"></i>
+          </div>
         </div>
-          <h3 className="title">{post?.activity}</h3>
+        <h3 className="title">{post?.activity}</h3>
         <p className="category-name">{post?.category.name}</p>
         <img className="detail-image" src={post?.img_url} alt="title" />
         <br />
         {post?.materials ? (
-          <p className="post-data"><b>Materials:</b> {post.materials}</p>
+          <p className="post-data">MATERIALS: {post.materials}</p>
         ) : null}
         {post?.instructions ? (
-          <p className="post-data">Instructions: {post.instructions}</p>
+          <p className="post-data">INSTRUCTIONS: {post.instructions}</p>
         ) : null}
         {post?.description ? (
-          <p className="post-data">Description {post.description}</p>
+          <p className="post-data">DESCRIPTION: {post.description}</p>
         ) : null}
         {post?.resources ? (
-          <p className="post-data">Resources: {post.resources}</p>
+          <p className="post-data">RESOURCES: {post.resources}</p>
         ) : null}
-      </div>
-
-      <div clas>
-        <Link to={`/posts/${post?.id}/edit`}>
-          <button>Edit</button>
-        </Link>
-        <div className="delete-btn" onClick={() => handleDelete(post?.id)}>
-          <i class="fas fa-trash-alt"></i>
-        </div>
       </div>
     </>
   );

@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { getOneCategory } from "../../services/categories";
 import { addToCategories } from "../../services/posts";
-
+import "./Create.css"
 
 export default function Create({ handleCreate, categoryList }) {
-  const { categoryData, setCateoryData } = useState()
-  const { selectedCategory, setSelectedCategory } = useState()
-  const { id } = useParams()
+  const { categoryData, setCateoryData } = useState();
+  const { selectedCategory, setSelectedCategory } = useState();
+  const { id } = useParams();
 
   const [formData, setFormData] = useState({
     activity: "",
@@ -18,7 +18,7 @@ export default function Create({ handleCreate, categoryList }) {
     category_id: "",
     img_url: "",
   });
-  
+
   const {
     activity,
     materials,
@@ -28,28 +28,15 @@ export default function Create({ handleCreate, categoryList }) {
     category_id,
     img_url,
   } = formData;
-  
+
   useEffect(() => {
     const fetchCategory = async () => {
-      const categoryData = await getOneCategory(id)
-      setCateoryData(categoryData)
-  }
-  fetchCategory()    
-  },[id, setCateoryData] )
+      const categoryData = await getOneCategory(id);
+      setCateoryData(categoryData);
+    };
+    fetchCategory();
+  }, [id, setCateoryData]);
 
-  // const handleCategoryChange = (e) => {
-  //   const { value } = e.target
-  //   setSelectedCategory(value)
-  // }
-
-//   const handleCategorySubmit = async (e) => {
-//     e.preventDefault()
-//     const categoryData = await addToCategories(id, selectedCategory)
-//     setSelectedCategory(categoryData)
-//  }
-
-
-  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevState) => ({
@@ -59,14 +46,24 @@ export default function Create({ handleCreate, categoryList }) {
   };
 
   return (
-    <form onSubmit={(e) => {
-      e.preventDefault()
-      handleCreate(formData)
-    }}>
-      {/* onSubmit={handleCategorySubmit}> */}
-      <h3>Create New Post</h3>
-      <label>
+    <form className="form"
+      onSubmit={(e) => {
+        e.preventDefault();
+        handleCreate(formData);
+      }}
+    >
+      <h3 className="title">Create New Post</h3>
+      <div className="create-btns">
+      <Link to="/">
+        <div className="home">
+          <i class="fas fa-home"></i>
+        </div>
+      </Link>
+      <div className="add-btn"><i class="fas fa-plus-square"></i></div>
+      </div>
+      <label >
         <input
+          className="inputs"
           type="text"
           name="activity"
           value={activity}
@@ -77,6 +74,7 @@ export default function Create({ handleCreate, categoryList }) {
       <br />
       <label>
         <input
+          className="inputs"
           type="text"
           name="materials"
           value={materials}
@@ -87,6 +85,7 @@ export default function Create({ handleCreate, categoryList }) {
       <br />
       <label>
         <input
+          className="inputs"
           type="text"
           name="instructions"
           value={instructions}
@@ -97,6 +96,7 @@ export default function Create({ handleCreate, categoryList }) {
       <br />
       <label>
         <input
+          className="inputs"
           type="text"
           name="description"
           value={description}
@@ -107,6 +107,7 @@ export default function Create({ handleCreate, categoryList }) {
       <br />
       <label>
         <input
+          className="inputs"
           type="text"
           name="resources"
           value={resources}
@@ -117,6 +118,7 @@ export default function Create({ handleCreate, categoryList }) {
       <br />
       <label>
         <input
+          className="inputs"
           type="text"
           name="img_url"
           value={img_url}
@@ -126,17 +128,24 @@ export default function Create({ handleCreate, categoryList }) {
       </label>
       <br />
       <label>
-        <select name="category_id" onChange={handleChange} defaultValue='default'>
-          <option disabled value='default'>
-            -- Select a Category --
+        <select
+          className="inputs" 
+          name="category_id"
+          onChange={handleChange}
+          defaultValue="default"
+        >
+          <option   disabled value="default">
+            - Select a Category -
           </option>
           {categoryList?.map((category) => (
-            <option key={category.id} value={category.id}>{category.name}</option>
+            <option key={category.id} value={category.id}>
+              {category.name}
+            </option>
           ))}
         </select>
       </label>
-      <br/>
-      <button>Add New Post</button>
+      <br />
+      
     </form>
   );
 }
