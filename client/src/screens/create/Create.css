@@ -1,0 +1,33 @@
+.form {
+  padding-bottom: 5rem;
+}
+.inputs {
+  height: 2rem;
+  width: 12rem;
+  font-family: "Schoolbell", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #fcb242;
+}
+
+.inputs:hover {
+  cursor: pointer;
+  background-color: #85c644;
+  opacity: 0.5;
+}
+.create-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.add-btn {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.add-btn:hover {
+  color: #FBEE77 ;
+}

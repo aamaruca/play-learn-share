@@ -3,8 +3,8 @@
   flex-direction: column;
   background-color: #16bdf1;
   border-radius: 25px;
-  padding: 0.5rem;
-  margin: auto;
+  padding-bottom: 1rem;
+  margin: 2.5rem auto;
   width: 90vw;
 }
 
@@ -14,29 +14,34 @@
   border-radius: 20px;
   width: 85vw;
 }
-.detail-card-header {
+.button-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: 1rem;
 }
 .back-btn {
-  position: relative;
-  left: -5rem;
   font-size: 2rem;
-  margin-top: 1rem;
 }
 .detail-home-btn {
-  position: relative;
-  right: -5rem;
   font-size: 2rem;
-  margin-top: 1rem;
 }
-.back-btn:hover {
-  color: #C295FB;
+.edit-btn {
+  font-size: 2rem;
+}
+.delete-btn {
+  font-size: 2rem;
 }
 
 .detail-home-btn:hover {
   color: #e91d1d;
+}
+.edit-btn:hover,
+.delete-btn:hover,
+.back-btn:hover {
+  cursor: pointer;
+  color: #fbee77;
 }
 .category-name {
   font-family: "Finger Paint", cursive;
@@ -44,6 +49,17 @@
   padding-bottom: 0.7rem;
 }
 
-.delete-btn {
-  font-size: 2rem;
+.post-data {
+  font-family: "Schoolbell", cursive;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .detail-card {
+    width: 70vw;
+  }
+  .detail-image {
+    width: 60vw;
+  }
 }

@@ -54,7 +54,10 @@ export default function MainContainer() {
   return (
     <Switch>
       <Route path="/category/:id">
-        <Category postList={postList} />
+        <Category
+          postList={postList}
+          categoryList={categoryList}
+        />
       </Route>
       <Route exact path="/posts/:id/edit">
         <EditPost
