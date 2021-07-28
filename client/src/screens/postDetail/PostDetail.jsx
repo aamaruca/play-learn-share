@@ -7,9 +7,9 @@ import "./PostDetail.css";
 export default function PostDetail(props) {
   const [post, setPost] = useState();
   const { id } = useParams();
-  const { handleDelete, categoryList } = props;
+  const { handleDelete } = props;
 
-  console.log(categoryList);
+
   useEffect(() => {
     const fetchPost = async () => {
       const postData = await getOnePost(id);
