@@ -1,0 +1,15 @@
+
+
+.edit-btns{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.editpost-btn {
+  font-size: 2rem;
+  padding: 1rem;
+}
+.editpost-btn:hover {
+  cursor: pointer;
+  color: #fbee77
+}
