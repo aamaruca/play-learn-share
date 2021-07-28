@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
 import "./Login.css"
 
 export default function Login({handleLogin}) {
@@ -13,9 +12,9 @@ export default function Login({handleLogin}) {
     const { name, value } = e.target
     setFromData(prevState => ({
       ...prevState,
-        [name]:value
+      [name]: value
     }))
-}
+  }
 
 
   return (

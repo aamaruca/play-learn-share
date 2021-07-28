@@ -59,7 +59,7 @@ export default function Create({ handleCreate, categoryList }) {
           <i class="fas fa-home"></i>
         </div>
       </Link>
-      <div className="add-btn"><i class="fas fa-plus-square"></i></div>
+      <button className="add-btn"><i class="fas fa-plus-square"></i></button>
       </div>
       <label >
         <input
