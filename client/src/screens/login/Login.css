@@ -1,0 +1,35 @@
+.input {
+  height: 3rem;
+  width: 12rem;
+  font-family: "Schoolbell", cursive;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #FF9BCB;
+}
+.submit-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #C295FB;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1rem;
+  width: 6rem;
+  padding: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+.join-btn {
+  border: none;
+  border-radius: 10px;
+  background-color: #C295FB;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1rem;
+  width: 6rem;
+  padding: .5rem;
+  margin-top: 1rem;
+  margin-bottom: 5rem;
+}
+
