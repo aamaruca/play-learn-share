@@ -85,6 +85,8 @@
 
 @media only screen and (min-width: 700px) {
   .logo {
+    width: 45vw;
+    height: auto;
     border-radius: 30px;
     padding: 1.5rem;
   }
@@ -125,4 +127,12 @@
     padding: 2rem;
   }
   
+}
+@media only screen and (min-width: 1000px) {
+  .logo {
+    width: 45vw;
+    height: auto;
+    border-radius: 30px;
+    padding: 1.5rem;
+  }
 }
