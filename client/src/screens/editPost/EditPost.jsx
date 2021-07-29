@@ -61,7 +61,7 @@ export default function EditPost({ postList, categoryList, handleUpdate }) {
           <i class="fas fa-home"></i>
         </div>
       </Link>
-      <div className="editpost-btn"><i class="fas fa-edit"></i></div>
+      <button className="editpost-btn"><i class="fas fa-edit"></i></button>
       </div>
       <label>
         <input
